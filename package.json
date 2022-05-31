@@ -1,19 +1,38 @@
 {
-  "name": "webpack",
+  "name": "js-portfolio",
   "version": "1.0.0",
-  "description": "primera clase de webpack",
-  "main": "src/index.js",
+  "description": "A minimal portfolio with Vanilla JavaScript",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --config webpack.config.dev.js",
+    "build": "webpack --mode production --config webpack.config.js",
+    "build:watch": "webpack --watch --config webpack.config.js"
   },
   "keywords": [
-    "webpack",
-    "Javascript",
-    "npm"
+    "javascript",
+    "html",
+    "css"
   ],
-  "author": "Mateo Díaz <mateodiaz401@gmail.com>",
+  "author": "Mateo Diaz <mateodiaz401@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.18.2",
+    "@babel/plugin-transform-runtime": "^7.18.2",
+    "@babel/preset-env": "^7.18.2",
+    "babel-loader": "^8.2.5",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.1",
+    "css-minimizer-webpack-plugin": "^4.0.0",
+    "dotenv-webpack": "^7.1.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "stylus": "^0.58.0",
+    "stylus-loader": "^7.0.0",
+    "terser-webpack-plugin": "^5.3.1",
+    "url-loader": "^4.1.1",
     "webpack": "^5.72.1",
     "webpack-cli": "^4.9.2"
   }

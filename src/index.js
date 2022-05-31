@@ -1,7 +1,8 @@
-import sum from './utils/sum.js'
+import Template from '@templates/Template.js';
+import '@styles/main.css';
+import '@styles/vasr.styl';
 
-const hello = "Hello";
-
-console.log(hello);
-
-console.log(sum( 5, 8));
+(async function App() {
+  const main = null || document.getElementById('main');
+  main.innerHTML = await Template();
+})();
