@@ -5,6 +5,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 
 
+
 module.exports = {
     entry: './src/index.js',
     output: {
@@ -77,5 +78,11 @@ module.exports = {
             ]
         }),
         new Dotenv(),
-    ]
+    ],
+    devServer: {
+        static: path.join(__dirname, 'dist'),
+        compress: true,
+        historyApiFallback:true,
+        port: 3010,
+    },
 }
